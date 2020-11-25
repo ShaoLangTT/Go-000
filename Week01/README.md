@@ -1,8 +1,11 @@
 学习笔记
 
-###### **文章书籍记录：https://shimo.im/docs/GYvDrQT8qW8RgkGY**
 
+[文章书籍问题点记录](https://shimo.im/docs/GYvDrQT8qW8RgkGY)<br />  
+---------------------------------------------------------------
 
+KnowledgePoint
+---------------------
 **1.Nginx -> API GetWay -> BFF -> SERVER**
 
 Nginx:进行反向代理
@@ -26,8 +29,15 @@ SERVER：单个服务应用（比如：用户服务，订单服务）
 对外部系统应该尽可能的宽容(开放)，对内应当尽可能的严苛(保守)，是从人类社会交往的"严于律己宽于律人"原则类比而来**
 
 
-**Documents**
+**Documents**<br /> 
+-------------------
 1.[Kubernetes教程](https://www.kuboard.cn/learning/)<br />  
-2.[点击这里我你可以链接到我的博客](http://guoyunsky.iteye.com)<br />  
+2.[gRPC 官方文档中文版](http://doc.oschina.net/grpc)<br />  
+3.[grpc-go](https://github.com/grpc/grpc-go)<br />  
+4.[Golang gRPC实践 连载](https://segmentfault.com/a/1190000007880647)<br />  
+5.[如何通过gRPC实现高效远程过程调用？](https://time.geekbang.org/column/article/247812)<br />  
+6.[《跟煎鱼学 Go》](https://eddycjy.com/go-categories/)<br />  
+7.[四层和七层负载均衡的区别](https://kb.cnblogs.com/page/188170/)<br />  
+
 
 
