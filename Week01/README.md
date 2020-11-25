@@ -2,6 +2,7 @@
 
 ###### **文章书籍记录：https://shimo.im/docs/GYvDrQT8qW8RgkGY**
 
+
 **1.Nginx -> API GetWay -> BFF -> SERVER**
 
 Nginx:进行反向代理
@@ -23,5 +24,10 @@ SERVER：单个服务应用（比如：用户服务，订单服务）
 
 **发送时要保守，接收时要开放：是指系统和外部系统做交互时的一个指导性原则，和具体技术无关。这里可以理解为，
 对外部系统应该尽可能的宽容(开放)，对内应当尽可能的严苛(保守)，是从人类社会交往的"严于律己宽于律人"原则类比而来**
+
+
+
+1.[点击这里你可以链接到www.google.com](http://www.google.com)<br />  
+2.[点击这里我你可以链接到我的博客](http://guoyunsky.iteye.com)<br />  
 
 
