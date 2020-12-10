@@ -3,6 +3,7 @@ package dao
 import (
 	"context"
 	"database/sql"
+	"fmt"
 	"github.com/pkg/errors"
 )
 
@@ -24,14 +25,10 @@ var (
 
 func (u User) FindUserNameByID(id int) (string, error) {
 	var name string
-	err := db.QueryRowContext(ctx, "SELECT name FROM user WHERE id=?", id).Scan(&name)
+	query := fmt.Sprintf("SELECT name FROM user WHERE id=%d", id)
+	err := db.QueryRowContext(ctx, query).Scan(&name)
 	if err != nil {
-		if errors.Is(err, sql.ErrNoRows) {
-			// 转换为自定义错误
-			err = UserNotFind
-		} else {
-			err = errors.Wrap(err, "failed to find user")
-		}
+		err = errors.Wrapf(UserNotFind, fmt.Sprintf("sql: %s error: %v", query, err))
 	}
 	return name, err
 }
