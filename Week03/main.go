@@ -3,7 +3,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"github.com/pkg/errors"
 	"golang.org/x/sync/errgroup"
 	"net/http"
 	"os"
@@ -50,11 +49,13 @@ func HttpServer(ctx context.Context) error {
 func SignalServer(ctx context.Context) error {
 	c := make(chan os.Signal, 1)
 	signal.Notify(c)
-	select {
-	case <-ctx.Done(): // 监听退出
-		os.Exit(0)
-		return nil
-	case call := <-c:
-		return errors.Errorf("os exit syscall : %v", call)
+	for {
+		select {
+		case <-ctx.Done(): // 监听退出
+			os.Exit(0)
+			return ctx.Err()
+		case <-c:
+			return nil
+		}
 	}
 }
